@@ -14,5 +14,5 @@ class CompanyViewSet(ModelViewSet):
 
 @api_view(http_method_names=["POST"])
 def send_email(request):
-    send_mail(subject=, message=, from_email=, recipient_list=)
+    send_mail(subject='status', message='status', from_email='status', recipient_list='status')
     return Response({'status': 'success', 'info': 'email sent'}, status=200)
