@@ -3,6 +3,3 @@ def fibonacci_recursive(n: int) -> int:
         return n
 
     return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
-
-
-print(fibonacci_recursive(42))
