@@ -5,6 +5,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.decorators import api_view
 from companies.serializers import CompanySerializer
 from companies.models import Company
+import dynamic
 
 
 class CompanyViewSet(ModelViewSet):
@@ -16,3 +17,12 @@ class CompanyViewSet(ModelViewSet):
 def send_email(request):
     send_mail(subject='status', message='status', from_email='status', recipient_list='status')
     return Response({'status': 'success', 'info': 'email sent'}, status=200)
+
+# todo set up an endpoint with fibonacci cal
+
+
+@api_view(http_method_names=["GET"])
+def get_fibonacci_result(request):
+    return Response(dynamic(request))
+
+
